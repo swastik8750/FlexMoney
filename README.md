@@ -29,22 +29,30 @@ same month they need to be in same batch
  
  I have used 3 pages for login, signup, and dashboard where User can see the enrolled batches(The list of upcoming batches user is enrolled) with the flexibilty to enroll in other batch within the dashboard.
  **Login:**
- ![Signin-page](https://user-images.githubusercontent.com/78960121/207646710-7ca985f9-af1e-47b5-ac2b-2bf87d32d4ce.png)
-
+  |-------------------------------------------------------------------------------------------|
+<kbd> ![Signin-page](https://user-images.githubusercontent.com/78960121/207646710-7ca985f9-af1e-47b5-ac2b-2bf87d32d4ce.png)</kbd>
+ |-------------------------------------------------------------------------------------------|
  **Signup:**
- ![signup-page](https://user-images.githubusercontent.com/78960121/207646758-ef20eb6e-a7e7-41e5-b0ea-22b1243dfa2e.png)
+  |-------------------------------------------------------------------------------------------|
+ <kbd>![signup-page](https://user-images.githubusercontent.com/78960121/207646758-ef20eb6e-a7e7-41e5-b0ea-22b1243dfa2e.png)</kbd>
+ |-------------------------------------------------------------------------------------------|
 
- Dashboard with list and new batch enroll: 
- ![dashboard-page](https://user-images.githubusercontent.com/78960121/207646735-de7b6190-7a9f-4479-aa7a-3310bc9ca4c0.png)
-
+ **Dashboard with list and new batch enroll: **
+  |-------------------------------------------------------------------------------------------|
+ <kbd>![dashboard-page](https://user-images.githubusercontent.com/78960121/207646735-de7b6190-7a9f-4479-aa7a-3310bc9ca4c0.png)</kbd>
+ |-------------------------------------------------------------------------------------------|
  
  #ER Diagram and Database Scheme:
  
  **ER Diagram:**
- ![ER_FLEX drawio](https://user-images.githubusercontent.com/78960121/207646638-817f77de-158e-4125-a58f-68141566e2c7.png)
+  |-------------------------------------------------------------------------------------------|
+ <kbd>![ER_FLEX drawio](https://user-images.githubusercontent.com/78960121/207646638-817f77de-158e-4125-a58f-68141566e2c7.png)</kbd>
+  |-------------------------------------------------------------------------------------------|
 
  **Database Diagram:**
-  ![Tables drawio](https://user-images.githubusercontent.com/78960121/207649966-f0b93d41-e3d4-4d3c-8ad1-0e74c9f3a669.png)
+  |-------------------------------------------------------------------------------------------|
+  <kbd>![Tables drawio](https://user-images.githubusercontent.com/78960121/207649966-f0b93d41-e3d4-4d3c-8ad1-0e74c9f3a669.png)</kbd>
+   |-------------------------------------------------------------------------------------------|
 
   ```User (
   username VARCHAR(255) PRIMARY KEY,
