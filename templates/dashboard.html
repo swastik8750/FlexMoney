@@ -1,0 +1,141 @@
+<html>
+<head>
+    <style>
+        .batch-list {
+            font-family: Arial, sans-serif;
+            margin: auto;
+            width: 60%;
+            border-collapse: collapse;
+        }
+
+        .batch-list td, .batch-list th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        .batch-list tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+    <style>
+        form {
+          margin: 20px;
+        }
+        
+        label {
+          font-weight: bold;
+        }
+        
+        select {
+          width: 150px;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        
+        input[type=text], input[type=submit] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        
+        input[type=submit] {
+          background-color: #4CAF50;
+          color: white;
+        }
+        
+        button[type=button] {
+          width: 100%;
+          background-color: #4CAF50;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        </style>
+        <style>
+            form {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            }
+        
+            input, select {
+              padding: 10px;
+              margin: 5px 0;
+              font-size: 16px;
+            }
+        
+            input[type="submit"] {
+              background-color: #4CAF50;
+              color: white;
+              cursor: pointer;
+            }
+          </style>
+        
+         
+        
+</head>
+<body>
+    <h1>YOGA CLASSES</h1>
+    {% for message in messages %}
+    <p style="color:red">&nbsp;&nbsp;&nbsp;&nbsp;  {{ message }}</p>
+   {% endfor %}
+    <h2>Enrolled Batches</h2>
+    <table class="batch-list">
+        <tr>
+            <th>Batch Name</th>
+            <th>Batch Month</th>
+        </tr>
+        {% for obj in enrolled_batched %}
+        <tr> 
+            <td>{{obj.batch}}</td>
+            <td>{{obj.month}}</td>
+        </tr>
+        {% endfor %}
+
+        <!-- Add more rows here for additional batches -->
+    </table>
+   
+      
+      
+        <button type="button" onclick="showEnrollmentForm()">Enroll Now</button>
+    
+      
+      <script>
+      function showEnrollmentForm() {
+        document.getElementById("enrollment-form").style.display = "block";
+      }
+      </script>
+      
+      <div id="enrollment-form" style="display: none;">
+        <form method="POST" id="user-register-form" class="register" action="enrollnow/">
+            {% csrf_token %}    
+            <h2>Choose your batch and date:</h2>
+
+            <label for="batch">Batch:</label>
+            <select id="batch" name ="batch">
+              <option value="6-7AM">6-7 AM</option>
+              <option value ="7-8AM"> 7-8 AM</option>
+              <option value = "8-9AM"> 8-9 AM</option>
+              <option value = "5-6PM"> 5-6 PM</option>
+            </select>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name ="date" required/>
+        
+            <input type="submit" value="PayNow" />
+        </form>
+      </div>
+      
+</body>
+</html>

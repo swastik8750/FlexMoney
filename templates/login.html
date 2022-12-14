@@ -1,0 +1,58 @@
+<html>
+<head>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    .signup-form {
+      width: 400px;
+      margin: 0 auto;
+    }
+    .signup-form h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .signup-form input[type="text"],
+    .signup-form input[type="email"],
+    .signup-form input[type="password"],
+    .signup-form input[type="date"],
+    .signup-form input[type="tel"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .signup-form input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .signup-form input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+    <h1>YOGA CLASSES</h1>
+  <div class="signup-form">
+    <h2>Sign In</h2>
+    <form method="POST" id="user-register-form" class="register" action="../signinuser/">
+        {% csrf_token %}    
+      <input type="email" placeholder="Email" name="email" required>
+      <input type="password" placeholder="Password" name="password" required>
+      {% for message in messages %}
+      <p style="color:red">&nbsp;&nbsp;&nbsp;&nbsp;  {{ message }}</p>
+     {% endfor %}
+      <input type="submit" value="Sign In">
+    </form>
+    <div class="form-group text-center mb-0 mt-3">
+       Don't have  An Account? <a href="../signupuser/" class="theme-cl">Signup</a>
+    </div>
+  </div>
+</body>
